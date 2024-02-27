@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraEdit</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Mohave:ital@1&family=Noto+Sans:ital,wght@1,300&family=Roboto:wght@300&display=swap');
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 55px;
+        margin-right: 50px;
+        padding-top: 30px;
+    
+    }
+
+    header div img{
+     width: 200px;
+
+    }
+    div ul{
+        display: flex;
+        /* align-items: center; */
+    }
+    div ul li{
+        list-style: none;
+        font-family: 'Roboto', Courier, monospace;
+        font-size: 17px;
+    }
+    ul li img{
+        width: 15px;
+        margin-right: 25px;
+    }
+    .main1{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 50px;
+    }
+    .main1 div{
+        font-family: 'Roboto';
+        
+    }
+    .heading{
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+    div div p{
+        width: 700px;
+        font-size: 20px;
+    }
+    .down1{
+        width: 250px;
+        height: 30px;
+        padding-top: 10px;
+        background-color: rgb(3, 167, 208);
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        margin-top: 20px;
+        
+    }
+
+    .main2{
+        margin-top: 50px;
+        display: flex;
+        margin-left: 330px;
+        align-items: center;
+    }
+    .logo{
+        background-color: rgb(233, 233, 2);
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto';
+        font-weight:bolder;
+        font-style: italic;
+        border-radius: 5px;
+        margin-right: 25px;
+    }
+    .down2{
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 5px;
+    }
+    .gridDiv{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .grid{
+        display: grid;
+        /* grid-template-columns: 220px 220px 220px; */
+        /* grid-template-rows: 130px 130px 130px 130px; */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 80vw;
+        
+    }
+    @media only screen and (max-width:780px) {
+        .grid{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .cellm{
+        
+        display: grid;
+        background-color: rgb(244, 243, 243);
+        grid-template-areas: "upper upper"
+                            "left right";
+        gap: 20px;
+        padding: 20px;
+        
+    }
+    .cell1{
+        grid-area: upper;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 17px;
+        font-weight: bold;
+        font-family: 'Roboto';
+        font-size: 20px;
+    }
+    .cell2{
+        background-color: rgb(3, 167, 208);
+        grid-area: left;
+        font-size: 15px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    
+    }
+    .cell3{
+        background-color: rgb(28, 188, 3);
+        grid-area: right;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    .footer1{
+        display: flex;
+        background-color: black;
+        height: 300px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .join{
+        color: white;
+        font-size: 25px;
+        font-family: 'Roboto';
+        margin-bottom: 8px;
+
+    }
+    .joinDescri{
+        color: white;
+        font-family: 'Roboto';
+        width: 380px;
+    }
+    .foot1{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .foot2{
+        background-color: whitesmoke;
+        padding: 15px;
+        margin-left: 30px;
+
+    }
+    .subHead{
+        color: rgb(3, 167, 208);
+        font-size: 22px;
+        font-family: 'Roboto';
+        margin-bottom: 15px;
+    }
+    .subEnter{
+        font-family: 'Roboto';
+    }
+    .subEmpty{
+        width: 220px;
+        height: 30px;
+        border: 0.5px solid rgb(117, 116, 116);
+        margin-top: 5px;
+    }
+    .subSign{
+        background-color: rgb(3, 167, 208);
+        color: white;
+        font-family: 'Roboto';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+    .footer2{
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: center;padding: 20px;
+        /* background-color: white; */
+    }
+    #paid{
+        font-family: 'Roboto';
+        font-size: 25px;
+    }
+
+</style>
+<body>
+    <header>
+        <div>
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="ultraedit">
+        </div>
+        <div>
+            <ul>
+                <li>Product</li>
+                <li><img src="https://th.bing.com/th/id/R.cdb84e6e83160f062c1fd4417da7441a?rik=KlbmaQI8ByZvOg&riu=http%3a%2f%2fclipart-library.com%2fimages%2frcLoRy7pi.jpg&ehk=Y2gNWGTmXRH%2bFCUeVkJ84iF1XlnkVK7UmBJiz6AWe2o%3d&risl=&pid=ImgRaw&r=0" alt=""></li>
+                <li>Pricing</li>
+                <li><img src="https://th.bing.com/th/id/R.cdb84e6e83160f062c1fd4417da7441a?rik=KlbmaQI8ByZvOg&riu=http%3a%2f%2fclipart-library.com%2fimages%2frcLoRy7pi.jpg&ehk=Y2gNWGTmXRH%2bFCUeVkJ84iF1XlnkVK7UmBJiz6AWe2o%3d&risl=&pid=ImgRaw&r=0" alt=""></li>
+                <li>Resources</li>
+                <li><img src="https://th.bing.com/th/id/R.cdb84e6e83160f062c1fd4417da7441a?rik=KlbmaQI8ByZvOg&riu=http%3a%2f%2fclipart-library.com%2fimages%2frcLoRy7pi.jpg&ehk=Y2gNWGTmXRH%2bFCUeVkJ84iF1XlnkVK7UmBJiz6AWe2o%3d&risl=&pid=ImgRaw&r=0" alt=""></li>
+                <li>About us</li>
+                <li><img src="https://th.bing.com/th/id/R.cdb84e6e83160f062c1fd4417da7441a?rik=KlbmaQI8ByZvOg&riu=http%3a%2f%2fclipart-library.com%2fimages%2frcLoRy7pi.jpg&ehk=Y2gNWGTmXRH%2bFCUeVkJ84iF1XlnkVK7UmBJiz6AWe2o%3d&risl=&pid=ImgRaw&r=0" alt=""></li>
+            </ul>
+        </div>
+    </header>  
+    
+    <div class="main1">
+        <div class="heading">Download UltraEdit for Windows</div>
+        <div><p>
+            Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.
+            Pahle istamal kare fir visvas kare
+        </p></div>
+        <a class="down1" href="https://www.ultraedit.com/downloads/uex-thank-you">Download for Mac or Linux</a>
+    </div>
+
+    <div class="main2">
+        <div class="logo">UE</div>
+        <div class="down2">Download UltraEdit</div>
+       
+        <div class=".released">v2023.1(released 08/16/2023) | Hotfix</div>
+    </div>
+
+    <div class="gridDiv">
+    <div class="grid">
+
+        <div class="cellm">
+            <div class="cell1">English</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        
+        <div class="cellm">
+            <div class="cell1">Hindi</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Marathi</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Marwadi</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Japanese</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">French</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">German</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Russian</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Tamil</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Arabic</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+        <div class="cellm">
+            <div class="cell1">Persian</div>
+            <a class="cell2" href="https://downloads.ultraedit.com/main/ue/win/ue_english.exe?_gl=1*16dwd7v*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 32-bits</a>
+            <a class="cell3" href="https://downloads.ultraedit.com/main/ue/win/ue_english_64.exe?_gl=1*1y6w3sh*_ga*MTE0NDA4MzQyNi4xNzAxMzY3NTYz*_ga_QNXHVTPWNS*MTcwMTQzMjE1Mi40LjEuMTcwMTQzMjQ1MC40OS4wLjA.">Download 64-bits</a>
+        </div>
+       
+        </div>
+    </div>
+</div>
+
+<div class="footer1">
+    <div class="foot1">
+        <t class="join">Join the UltraEdit newsletter</t>
+        <t class="joinDescri">Sign up for our newsletter and receive emails for the latest news, blogs, and special deals on UltraEdit.</t>
+    </div>
+    <div class="foot2">
+        <div class="subHead">Subscribe to our emails</div>
+        <div class="subEnter">Enter email address</div>
+        <div class="subEmpty"></div>
+        <div class="subSign">Sign Up</div>
+    </div>
+</div>
+        
+<div class="footer2">
+    <ul>
+        <li id="paid">Our paid products</li>
+        <li><img src="https://th.bing.com/th/id/R.cdb84e6e83160f062c1fd4417da7441a?rik=KlbmaQI8ByZvOg&riu=http%3a%2f%2fclipart-library.com%2fimages%2frcLoRy7pi.jpg&ehk=Y2gNWGTmXRH%2bFCUeVkJ84iF1XlnkVK7UmBJiz6AWe2o%3d&risl=&pid=ImgRaw&r=0" alt=""></li>
+    </ul>
+</div>
+</div>
+</div>
+</body>
+</html>
